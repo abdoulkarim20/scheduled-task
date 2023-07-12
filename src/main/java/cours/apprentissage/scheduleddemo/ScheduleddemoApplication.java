@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
+import java.util.Date;
+
 @SpringBootApplication
 @EnableScheduling
 public class ScheduleddemoApplication {
@@ -17,6 +19,7 @@ public class ScheduleddemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ScheduleddemoApplication.class, args);
+        System.out.println(new Date());
     }
 
     @Scheduled(cron = "0 5 12 * * *")

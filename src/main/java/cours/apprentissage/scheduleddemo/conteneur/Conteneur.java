@@ -11,6 +11,9 @@ public class Conteneur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String numeroConteneur;
+    private String typeConteneur;
+    private String tailleConteneur;
+    private String numeroPlomb;
     @ManyToOne
     private Article article;
 
@@ -28,6 +31,30 @@ public class Conteneur {
 
     public void setNumeroConteneur(String numeroConteneur) {
         this.numeroConteneur = numeroConteneur;
+    }
+
+    public String getTypeConteneur() {
+        return typeConteneur;
+    }
+
+    public void setTypeConteneur(String typeConteneur) {
+        this.typeConteneur = typeConteneur;
+    }
+
+    public String getTailleConteneur() {
+        return tailleConteneur;
+    }
+
+    public void setTailleConteneur(String tailleConteneur) {
+        this.tailleConteneur = tailleConteneur;
+    }
+
+    public String getNumeroPlomb() {
+        return numeroPlomb;
+    }
+
+    public void setNumeroPlomb(String numeroPlomb) {
+        this.numeroPlomb = numeroPlomb;
     }
 
     public Article getArticle() {
