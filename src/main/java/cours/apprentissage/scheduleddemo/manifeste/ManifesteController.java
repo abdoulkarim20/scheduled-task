@@ -1,8 +1,11 @@
 package cours.apprentissage.scheduleddemo.manifeste;
 
+import cours.apprentissage.scheduleddemo.manifeste.dtos.ManifesteArticleDTO;
 import cours.apprentissage.scheduleddemo.manifeste.dtos.ManifesteDTO;
 import cours.apprentissage.scheduleddemo.manifeste.dtos.ManifestePostDTO;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/manifestes")
@@ -16,5 +19,9 @@ public class ManifesteController {
     @PostMapping()
     public ManifesteDTO manifesteDTO(@RequestBody ManifestePostDTO object){
         return iManifeste.save(object);
+    }
+    @GetMapping("/liste")
+    public List<ManifesteArticleDTO>getAll(){
+        return iManifeste.getAllManifeste();
     }
 }

@@ -14,7 +14,6 @@ public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String connaissement;
     private Date dateEmbarquement;
     private String lieuEmbarquement;
     private String paysDestination;
@@ -44,14 +43,6 @@ public class Article {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getConnaissement() {
-        return connaissement;
-    }
-
-    public void setConnaissement(String connaissement) {
-        this.connaissement = connaissement;
     }
 
     public Date getDateEmbarquement() {

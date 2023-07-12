@@ -1,7 +1,6 @@
 package cours.apprentissage.scheduleddemo.manifeste.dtos;
 
 import cours.apprentissage.scheduleddemo.article.Article;
-import cours.apprentissage.scheduleddemo.article.dtos.ArticleDTO;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,8 +20,7 @@ public class ManifestePostDTO {
     private Date dateArrivee;
     private Double volume;
     private Long nombreArticle;
-    private String ppmDeclarant;
-    private String ppmBeneficiaire;
+    private String connaissement;
     List<Article>articles=new ArrayList<>();
 
     public String getAnnee() {
@@ -129,27 +127,19 @@ public class ManifestePostDTO {
         this.nombreArticle = nombreArticle;
     }
 
+    public String getConnaissement() {
+        return connaissement;
+    }
+
+    public void setConnaissement(String connaissement) {
+        this.connaissement = connaissement;
+    }
+
     public List<Article> getArticles() {
         return articles;
     }
 
     public void setArticles(List<Article> articles) {
         this.articles = articles;
-    }
-
-    public String getPpmDeclarant() {
-        return ppmDeclarant;
-    }
-
-    public void setPpmDeclarant(String ppmDeclarant) {
-        this.ppmDeclarant = ppmDeclarant;
-    }
-
-    public String getPpmBeneficiaire() {
-        return ppmBeneficiaire;
-    }
-
-    public void setPpmBeneficiaire(String ppmBeneficiaire) {
-        this.ppmBeneficiaire = ppmBeneficiaire;
     }
 }

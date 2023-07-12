@@ -1,10 +1,12 @@
 package cours.apprentissage.scheduleddemo.article.dtos;
 
-import cours.apprentissage.scheduleddemo.manifeste.dtos.ManifesteDTO;
+import cours.apprentissage.scheduleddemo.conteneur.dtos.ConteneurArticleDTO;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
-public class ArticleDTO {
+public class ArticleManifesteDTO {
     private Long id;
     private Date dateEmbarquement;
     private String lieuEmbarquement;
@@ -23,7 +25,7 @@ public class ArticleDTO {
     private String marqueColis;
     private String modeConditionnement;
     private String nombreConteneur;
-    private ManifesteDTO manifeste;
+    List<ConteneurArticleDTO>conteneurs=new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -105,14 +107,6 @@ public class ArticleDTO {
         this.aOrdre = aOrdre;
     }
 
-    public String getMarchandise() {
-        return marchandise;
-    }
-
-    public void setMarchandise(String marchandise) {
-        this.marchandise = marchandise;
-    }
-
     public String getPaysProvenance() {
         return paysProvenance;
     }
@@ -169,11 +163,19 @@ public class ArticleDTO {
         this.nombreConteneur = nombreConteneur;
     }
 
-    public ManifesteDTO getManifeste() {
-        return manifeste;
+    public List<ConteneurArticleDTO> getConteneurs() {
+        return conteneurs;
     }
 
-    public void setManifeste(ManifesteDTO manifeste) {
-        this.manifeste = manifeste;
+    public String getMarchandise() {
+        return marchandise;
+    }
+
+    public void setMarchandise(String marchandise) {
+        this.marchandise = marchandise;
+    }
+
+    public void setConteneurs(List<ConteneurArticleDTO> conteneurs) {
+        this.conteneurs = conteneurs;
     }
 }

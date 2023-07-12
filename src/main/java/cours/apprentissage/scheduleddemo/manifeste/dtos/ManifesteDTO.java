@@ -17,8 +17,7 @@ public class ManifesteDTO {
     private Date dateArrivee;
     private Double volume;
     private Long nombreArticle;
-    private String ppmDeclarant;
-    private String ppmBeneficiaire;
+    private String connaissement;
 
     public Long getId() {
         return id;
@@ -132,19 +131,11 @@ public class ManifesteDTO {
         this.nombreArticle = nombreArticle;
     }
 
-    public String getPpmDeclarant() {
-        return ppmDeclarant;
+    public String getConnaissement() {
+        return connaissement;
     }
 
-    public void setPpmDeclarant(String ppmDeclarant) {
-        this.ppmDeclarant = ppmDeclarant;
-    }
-
-    public String getPpmBeneficiaire() {
-        return ppmBeneficiaire;
-    }
-
-    public void setPpmBeneficiaire(String ppmBeneficiaire) {
-        this.ppmBeneficiaire = ppmBeneficiaire;
+    public void setConnaissement(String connaissement) {
+        this.connaissement = connaissement;
     }
 }

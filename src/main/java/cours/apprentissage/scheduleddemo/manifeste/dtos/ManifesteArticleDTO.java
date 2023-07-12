@@ -1,17 +1,12 @@
-package cours.apprentissage.scheduleddemo.manifeste;
+package cours.apprentissage.scheduleddemo.manifeste.dtos;
 
-import cours.apprentissage.scheduleddemo.article.Article;
+import cours.apprentissage.scheduleddemo.article.dtos.ArticleManifesteDTO;
 
-import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Entity
-@Table(name = "manifestes")
-public class Manifeste {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ManifesteArticleDTO {
     private Long id;
     private String annee;
     private String bureau;
@@ -27,8 +22,7 @@ public class Manifeste {
     private Double volume;
     private Long nombreArticle;
     private String connaissement;
-    @OneToMany(mappedBy = "manifeste")
-    private List<Article> articles = new ArrayList<>();
+    private List<ArticleManifesteDTO>articles=new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -150,11 +144,11 @@ public class Manifeste {
         this.connaissement = connaissement;
     }
 
-    public List<Article> getArticles() {
+    public List<ArticleManifesteDTO> getArticles() {
         return articles;
     }
 
-    public void setArticles(List<Article> articles) {
+    public void setArticles(List<ArticleManifesteDTO> articles) {
         this.articles = articles;
     }
 }
