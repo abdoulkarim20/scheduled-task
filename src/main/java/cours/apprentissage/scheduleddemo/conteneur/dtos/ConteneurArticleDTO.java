@@ -1,19 +1,10 @@
 package cours.apprentissage.scheduleddemo.conteneur.dtos;
 
 public class ConteneurArticleDTO {
-    private Long id;
     private String numeroConteneur;
     private String typeConteneur;
     private String tailleConteneur;
     private String numeroPlomb;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNumeroConteneur() {
         return numeroConteneur;

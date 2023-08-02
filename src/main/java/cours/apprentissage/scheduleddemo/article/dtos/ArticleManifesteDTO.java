@@ -1,38 +1,57 @@
 package cours.apprentissage.scheduleddemo.article.dtos;
 
 import cours.apprentissage.scheduleddemo.conteneur.dtos.ConteneurArticleDTO;
+import cours.apprentissage.scheduleddemo.manifeste.dtos.ManifesteDTO;
 
+import javax.persistence.Column;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class ArticleManifesteDTO {
-    private Long id;
+    private Long art;
+    private Long prec1;
+    private Long prec2;
     private Date dateEmbarquement;
     private String lieuEmbarquement;
     private String paysDestination;
     private String villeDestination;
+    private String connaissement;
     private String expediteur;
-    private String nomDestinataire;
-    private String nomVoieDestinataire;
-    private String villeDestinataire;
-    private String aOrdre;
+    private String destinataire;
+    private String voieDestinataire;
+    private String ordre;
+    @Column(columnDefinition = "LONGTEXT", length = 1000)
     private String marchandise;
-    private String paysProvenance;
-    private String destinationDefinitive;
     private String poids;
     private String nombreColis;
-    private String marqueColis;
+    private String marque;
     private String modeConditionnement;
-    private String nombreConteneur;
+    private ManifesteDTO manifeste;
     List<ConteneurArticleDTO>conteneurs=new ArrayList<>();
 
-    public Long getId() {
-        return id;
+    public Long getArt() {
+        return art;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setArt(Long art) {
+        this.art = art;
+    }
+
+    public Long getPrec1() {
+        return prec1;
+    }
+
+    public void setPrec1(Long prec1) {
+        this.prec1 = prec1;
+    }
+
+    public Long getPrec2() {
+        return prec2;
+    }
+
+    public void setPrec2(Long prec2) {
+        this.prec2 = prec2;
     }
 
     public Date getDateEmbarquement() {
@@ -67,6 +86,14 @@ public class ArticleManifesteDTO {
         this.villeDestination = villeDestination;
     }
 
+    public String getConnaissement() {
+        return connaissement;
+    }
+
+    public void setConnaissement(String connaissement) {
+        this.connaissement = connaissement;
+    }
+
     public String getExpediteur() {
         return expediteur;
     }
@@ -75,52 +102,36 @@ public class ArticleManifesteDTO {
         this.expediteur = expediteur;
     }
 
-    public String getNomDestinataire() {
-        return nomDestinataire;
+    public String getDestinataire() {
+        return destinataire;
     }
 
-    public void setNomDestinataire(String nomDestinataire) {
-        this.nomDestinataire = nomDestinataire;
+    public void setDestinataire(String destinataire) {
+        this.destinataire = destinataire;
     }
 
-    public String getNomVoieDestinataire() {
-        return nomVoieDestinataire;
+    public String getVoieDestinataire() {
+        return voieDestinataire;
     }
 
-    public void setNomVoieDestinataire(String nomVoieDestinataire) {
-        this.nomVoieDestinataire = nomVoieDestinataire;
+    public void setVoieDestinataire(String voieDestinataire) {
+        this.voieDestinataire = voieDestinataire;
     }
 
-    public String getVilleDestinataire() {
-        return villeDestinataire;
+    public String getOrdre() {
+        return ordre;
     }
 
-    public void setVilleDestinataire(String villeDestinataire) {
-        this.villeDestinataire = villeDestinataire;
+    public void setOrdre(String ordre) {
+        this.ordre = ordre;
     }
 
-    public String getaOrdre() {
-        return aOrdre;
+    public String getMarchandise() {
+        return marchandise;
     }
 
-    public void setaOrdre(String aOrdre) {
-        this.aOrdre = aOrdre;
-    }
-
-    public String getPaysProvenance() {
-        return paysProvenance;
-    }
-
-    public void setPaysProvenance(String paysProvenance) {
-        this.paysProvenance = paysProvenance;
-    }
-
-    public String getDestinationDefinitive() {
-        return destinationDefinitive;
-    }
-
-    public void setDestinationDefinitive(String destinationDefinitive) {
-        this.destinationDefinitive = destinationDefinitive;
+    public void setMarchandise(String marchandise) {
+        this.marchandise = marchandise;
     }
 
     public String getPoids() {
@@ -139,12 +150,12 @@ public class ArticleManifesteDTO {
         this.nombreColis = nombreColis;
     }
 
-    public String getMarqueColis() {
-        return marqueColis;
+    public String getMarque() {
+        return marque;
     }
 
-    public void setMarqueColis(String marqueColis) {
-        this.marqueColis = marqueColis;
+    public void setMarque(String marque) {
+        this.marque = marque;
     }
 
     public String getModeConditionnement() {
@@ -155,24 +166,16 @@ public class ArticleManifesteDTO {
         this.modeConditionnement = modeConditionnement;
     }
 
-    public String getNombreConteneur() {
-        return nombreConteneur;
+    public ManifesteDTO getManifeste() {
+        return manifeste;
     }
 
-    public void setNombreConteneur(String nombreConteneur) {
-        this.nombreConteneur = nombreConteneur;
+    public void setManifeste(ManifesteDTO manifeste) {
+        this.manifeste = manifeste;
     }
 
     public List<ConteneurArticleDTO> getConteneurs() {
         return conteneurs;
-    }
-
-    public String getMarchandise() {
-        return marchandise;
-    }
-
-    public void setMarchandise(String marchandise) {
-        this.marchandise = marchandise;
     }
 
     public void setConteneurs(List<ConteneurArticleDTO> conteneurs) {

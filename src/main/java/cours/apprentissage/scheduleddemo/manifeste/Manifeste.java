@@ -13,20 +13,21 @@ public class Manifeste {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String annee;
-    private String bureau;
-    private Long numero;
+    private String anneeManif;
+    private String bureauManif;
+    private Long numeroManif;
     private String consignataire;
     private String numeroRepertoire;
     private String navire;
-    private String typeNavire;
-    private String origine;
     private String provenance;
     private String pavillon;
     private Date dateArrivee;
-    private Double volume;
+    private Double valapprox;
     private Long nombreArticle;
+    /** Les attributs qui a ete ajouter par l'app GUP et qui ne provient pas de la douane*/
     private String connaissement;
+    private String codeConsignataire;
+    private String codeManutentionnaire;
     @OneToMany(mappedBy = "manifeste")
     private List<Article> articles = new ArrayList<>();
 
@@ -38,28 +39,28 @@ public class Manifeste {
         this.id = id;
     }
 
-    public String getAnnee() {
-        return annee;
+    public String getAnneeManif() {
+        return anneeManif;
     }
 
-    public void setAnnee(String annee) {
-        this.annee = annee;
+    public void setAnneeManif(String anneeManif) {
+        this.anneeManif = anneeManif;
     }
 
-    public String getBureau() {
-        return bureau;
+    public String getBureauManif() {
+        return bureauManif;
     }
 
-    public void setBureau(String bureau) {
-        this.bureau = bureau;
+    public void setBureauManif(String bureauManif) {
+        this.bureauManif = bureauManif;
     }
 
-    public Long getNumero() {
-        return numero;
+    public Long getNumeroManif() {
+        return numeroManif;
     }
 
-    public void setNumero(Long numero) {
-        this.numero = numero;
+    public void setNumeroManif(Long numeroManif) {
+        this.numeroManif = numeroManif;
     }
 
     public String getConsignataire() {
@@ -86,22 +87,6 @@ public class Manifeste {
         this.navire = navire;
     }
 
-    public String getTypeNavire() {
-        return typeNavire;
-    }
-
-    public void setTypeNavire(String typeNavire) {
-        this.typeNavire = typeNavire;
-    }
-
-    public String getOrigine() {
-        return origine;
-    }
-
-    public void setOrigine(String origine) {
-        this.origine = origine;
-    }
-
     public String getProvenance() {
         return provenance;
     }
@@ -126,12 +111,12 @@ public class Manifeste {
         this.dateArrivee = dateArrivee;
     }
 
-    public Double getVolume() {
-        return volume;
+    public Double getValapprox() {
+        return valapprox;
     }
 
-    public void setVolume(Double volume) {
-        this.volume = volume;
+    public void setValapprox(Double valapprox) {
+        this.valapprox = valapprox;
     }
 
     public Long getNombreArticle() {
@@ -148,6 +133,22 @@ public class Manifeste {
 
     public void setConnaissement(String connaissement) {
         this.connaissement = connaissement;
+    }
+
+    public String getCodeConsignataire() {
+        return codeConsignataire;
+    }
+
+    public void setCodeConsignataire(String codeConsignataire) {
+        this.codeConsignataire = codeConsignataire;
+    }
+
+    public String getCodeManutentionnaire() {
+        return codeManutentionnaire;
+    }
+
+    public void setCodeManutentionnaire(String codeManutentionnaire) {
+        this.codeManutentionnaire = codeManutentionnaire;
     }
 
     public List<Article> getArticles() {
