@@ -59,7 +59,6 @@ public class ManifesteImpl implements IManifeste {
         manifesteDTO.setDateArrivee(manifestePostDTO.getDateArrivee());
         manifesteDTO.setValapprox(manifestePostDTO.getValapprox());
         manifesteDTO.setNombreArticle(manifestePostDTO.getNombreArticle());
-        manifesteDTO.setConnaissement(manifestePostDTO.getConnaissement());
         manifesteDTO.setCodeConsignataire(manifestePostDTO.getCodeConsignataire());
         Manifeste manifesteToSave = manifesteMapper.toEntity(manifesteDTO);
         Manifeste manifesteSaved = manifesteRepository.save(manifesteToSave);
@@ -129,7 +128,6 @@ public class ManifesteImpl implements IManifeste {
         manifesteArticleDTO.setDateArrivee(manifestePostDTO.getDateArrivee());
         manifesteArticleDTO.setValapprox(manifestePostDTO.getValapprox());
         manifesteArticleDTO.setNombreArticle(manifestePostDTO.getNombreArticle());
-        manifesteArticleDTO.setConnaissement(manifestePostDTO.getConnaissement());
         Manifeste manifesteToSave = manifesteArticleMapper.toEntity(manifesteArticleDTO);
         Manifeste manifesteSaved = manifesteRepository.save(manifesteToSave);
         List<ArticleManifesteDTO> articles = new ArrayList<>();

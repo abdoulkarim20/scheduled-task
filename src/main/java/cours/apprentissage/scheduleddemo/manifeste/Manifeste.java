@@ -25,7 +25,6 @@ public class Manifeste {
     private Double valapprox;
     private Long nombreArticle;
     /** Les attributs qui a ete ajouter par l'app GUP et qui ne provient pas de la douane*/
-    private String connaissement;
     private String codeConsignataire;
     private String codeManutentionnaire;
     @OneToMany(mappedBy = "manifeste")
@@ -126,15 +125,6 @@ public class Manifeste {
     public void setNombreArticle(Long nombreArticle) {
         this.nombreArticle = nombreArticle;
     }
-
-    public String getConnaissement() {
-        return connaissement;
-    }
-
-    public void setConnaissement(String connaissement) {
-        this.connaissement = connaissement;
-    }
-
     public String getCodeConsignataire() {
         return codeConsignataire;
     }

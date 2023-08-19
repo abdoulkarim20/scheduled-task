@@ -8,11 +8,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class ArticleImpl implements IArticle{
     private final ArticleRepository articleRepository;
-
     public ArticleImpl(ArticleRepository articleRepository) {
         this.articleRepository = articleRepository;
     }
-
     @Override
     public ArticleDTO save(ArticleDTO articleDTO) {
         return null;
