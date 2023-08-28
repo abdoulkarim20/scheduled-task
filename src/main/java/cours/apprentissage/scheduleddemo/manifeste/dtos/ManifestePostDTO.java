@@ -7,44 +7,44 @@ import java.util.Date;
 import java.util.List;
 
 public class ManifestePostDTO {
-    private String anneeManif;
-    private String bureauManif;
-    private Long numeroManif;
+    private String annee_manif;
+    private String bureau_manif;
+    private Long numero_manif;
     private String consignataire;
-    private String numeroRepertoire;
+    private String repertoire;
     private String navire;
     private String provenance;
     private String pavillon;
-    private Date dateArrivee;
+    private Date date_arrivee;
     private Double valapprox;
-    private Long nombreArticle;
+    private Long nbre_article;
     /** Les attributs qui a ete ajouter par l'app GUP et qui ne provient pas de la douane*/
     private String codeConsignataire;
     private String codeManutentionnaire;
     List<Article>articles=new ArrayList<>();
 
-    public String getAnneeManif() {
-        return anneeManif;
+    public String getAnnee_manif() {
+        return annee_manif;
     }
 
-    public void setAnneeManif(String anneeManif) {
-        this.anneeManif = anneeManif;
+    public void setAnnee_manif(String annee_manif) {
+        this.annee_manif = annee_manif;
     }
 
-    public String getBureauManif() {
-        return bureauManif;
+    public String getBureau_manif() {
+        return bureau_manif;
     }
 
-    public void setBureauManif(String bureauManif) {
-        this.bureauManif = bureauManif;
+    public void setBureau_manif(String bureau_manif) {
+        this.bureau_manif = bureau_manif;
     }
 
-    public Long getNumeroManif() {
-        return numeroManif;
+    public Long getNumero_manif() {
+        return numero_manif;
     }
 
-    public void setNumeroManif(Long numeroManif) {
-        this.numeroManif = numeroManif;
+    public void setNumero_manif(Long numero_manif) {
+        this.numero_manif = numero_manif;
     }
 
     public String getConsignataire() {
@@ -55,12 +55,12 @@ public class ManifestePostDTO {
         this.consignataire = consignataire;
     }
 
-    public String getNumeroRepertoire() {
-        return numeroRepertoire;
+    public String getRepertoire() {
+        return repertoire;
     }
 
-    public void setNumeroRepertoire(String numeroRepertoire) {
-        this.numeroRepertoire = numeroRepertoire;
+    public void setRepertoire(String repertoire) {
+        this.repertoire = repertoire;
     }
 
     public String getNavire() {
@@ -87,12 +87,12 @@ public class ManifestePostDTO {
         this.pavillon = pavillon;
     }
 
-    public Date getDateArrivee() {
-        return dateArrivee;
+    public Date getDate_arrivee() {
+        return date_arrivee;
     }
 
-    public void setDateArrivee(Date dateArrivee) {
-        this.dateArrivee = dateArrivee;
+    public void setDate_arrivee(Date date_arrivee) {
+        this.date_arrivee = date_arrivee;
     }
 
     public Double getValapprox() {
@@ -103,13 +103,6 @@ public class ManifestePostDTO {
         this.valapprox = valapprox;
     }
 
-    public Long getNombreArticle() {
-        return nombreArticle;
-    }
-
-    public void setNombreArticle(Long nombreArticle) {
-        this.nombreArticle = nombreArticle;
-    }
     public String getCodeConsignataire() {
         return codeConsignataire;
     }
@@ -132,5 +125,13 @@ public class ManifestePostDTO {
 
     public void setArticles(List<Article> articles) {
         this.articles = articles;
+    }
+
+    public Long getNbre_article() {
+        return nbre_article;
+    }
+
+    public void setNbre_article(Long nbre_article) {
+        this.nbre_article = nbre_article;
     }
 }

@@ -48,17 +48,17 @@ public class ManifesteImpl implements IManifeste {
     @Override
     public ManifesteDTO save(ManifestePostDTO manifestePostDTO) {
         ManifesteDTO manifesteDTO = new ManifesteDTO();
-        manifesteDTO.setAnneeManif(manifestePostDTO.getAnneeManif());
-        manifesteDTO.setBureauManif(manifestePostDTO.getBureauManif());
-        manifesteDTO.setNumeroManif(manifestePostDTO.getNumeroManif());
+        manifesteDTO.setAnnee_manif(manifestePostDTO.getAnnee_manif());
+        manifesteDTO.setBureau_manif(manifestePostDTO.getBureau_manif());
+        manifesteDTO.setNumero_manif(manifestePostDTO.getNumero_manif());
         manifesteDTO.setConsignataire(manifestePostDTO.getConsignataire());
-        manifesteDTO.setNumeroRepertoire(manifestePostDTO.getNumeroRepertoire());
+        manifesteDTO.setRepertoire(manifestePostDTO.getRepertoire());
         manifesteDTO.setNavire(manifestePostDTO.getNavire());
         manifesteDTO.setProvenance(manifestePostDTO.getProvenance());
         manifesteDTO.setPavillon(manifestePostDTO.getPavillon());
-        manifesteDTO.setDateArrivee(manifestePostDTO.getDateArrivee());
+        manifesteDTO.setDate_arrivee(manifestePostDTO.getDate_arrivee());
         manifesteDTO.setValapprox(manifestePostDTO.getValapprox());
-        manifesteDTO.setNombreArticle(manifestePostDTO.getNombreArticle());
+        manifesteDTO.setNbre_article(manifestePostDTO.getNbre_article());
         manifesteDTO.setCodeConsignataire(manifestePostDTO.getCodeConsignataire());
         Manifeste manifesteToSave = manifesteMapper.toEntity(manifesteDTO);
         Manifeste manifesteSaved = manifesteRepository.save(manifesteToSave);
@@ -110,24 +110,23 @@ public class ManifesteImpl implements IManifeste {
         List<ManifesteArticleDTO> list = response.getBody();
         for (ManifesteArticleDTO manifesteArticleDTO : list) {
             /*avarnav.setEscale("Guinee Conakry");*/
-            System.out.println("les listes sont:" + manifesteArticleDTO);
             saveTest(manifesteArticleDTO);
         }
     }
 
     public ManifesteDTO saveTest(ManifesteArticleDTO manifestePostDTO) {
         ManifesteArticleDTO manifesteArticleDTO = new ManifesteArticleDTO();
-        manifesteArticleDTO.setAnneeManif(manifestePostDTO.getAnneeManif());
-        manifesteArticleDTO.setBureauManif(manifestePostDTO.getBureauManif());
-        manifesteArticleDTO.setNumeroManif(manifestePostDTO.getNumeroManif());
+        manifesteArticleDTO.setAnnee_manif(manifestePostDTO.getAnnee_manif());
+        manifesteArticleDTO.setBureau_manif(manifestePostDTO.getBureau_manif());
+        manifesteArticleDTO.setNumero_manif(manifestePostDTO.getNumero_manif());
         manifesteArticleDTO.setConsignataire(manifestePostDTO.getConsignataire());
-        manifesteArticleDTO.setNumeroRepertoire(manifestePostDTO.getNumeroRepertoire());
+        manifesteArticleDTO.setRepertoire(manifestePostDTO.getRepertoire());
         manifesteArticleDTO.setNavire(manifestePostDTO.getNavire());
         manifesteArticleDTO.setProvenance(manifestePostDTO.getProvenance());
         manifesteArticleDTO.setPavillon(manifestePostDTO.getPavillon());
-        manifesteArticleDTO.setDateArrivee(manifestePostDTO.getDateArrivee());
+        manifesteArticleDTO.setDate_arrivee(manifestePostDTO.getDate_arrivee());
         manifesteArticleDTO.setValapprox(manifestePostDTO.getValapprox());
-        manifesteArticleDTO.setNombreArticle(manifestePostDTO.getNombreArticle());
+        manifesteArticleDTO.setNbre_article(manifestePostDTO.getNbre_article());
         Manifeste manifesteToSave = manifesteArticleMapper.toEntity(manifesteArticleDTO);
         Manifeste manifesteSaved = manifesteRepository.save(manifesteToSave);
         List<ArticleManifesteDTO> articles = new ArrayList<>();

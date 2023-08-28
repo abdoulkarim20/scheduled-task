@@ -24,9 +24,9 @@ public class ScheduleddemoApplication {
                 "Appel a l'api de l'avarnav chaque a partir de 12H-00MM-00SS"
         );
         /** Appel a l'api de la douane pour enregistrer les avarnav*/
-        //iAvarnav.getAllAvarnavFromDouane();
+        /*iAvarnav.getAllAvarnavFromDouane();*/
         /** Test pour parcourir les manifeste douane et enregistrer*/
-        iManifeste.getAllManfiesteAndSave();
+        /*iManifeste.getAllManfiesteAndSave();*/
     }
 
 }

@@ -12,7 +12,6 @@ import java.util.List;
 @CrossOrigin("*")
 public class BaedController {
     private final BaedReposirtory baedReposirtory;
-
     public BaedController(BaedReposirtory baedReposirtory) {
         this.baedReposirtory = baedReposirtory;
     }

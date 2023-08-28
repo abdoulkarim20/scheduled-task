@@ -1,40 +1,40 @@
 package cours.apprentissage.scheduleddemo.conteneur.dtos;
 
 public class ConteneurArticleDTO {
-    private String numeroConteneur;
-    private String typeConteneur;
-    private String tailleConteneur;
-    private String numeroPlomb;
+    private String conteneur;
+    private String type;
+    private String taille;
+    private String plomb;
 
-    public String getNumeroConteneur() {
-        return numeroConteneur;
+    public String getConteneur() {
+        return conteneur;
     }
 
-    public void setNumeroConteneur(String numeroConteneur) {
-        this.numeroConteneur = numeroConteneur;
+    public void setConteneur(String conteneur) {
+        this.conteneur = conteneur;
     }
 
-    public String getTypeConteneur() {
-        return typeConteneur;
+    public String getType() {
+        return type;
     }
 
-    public void setTypeConteneur(String typeConteneur) {
-        this.typeConteneur = typeConteneur;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getTailleConteneur() {
-        return tailleConteneur;
+    public String getTaille() {
+        return taille;
     }
 
-    public void setTailleConteneur(String tailleConteneur) {
-        this.tailleConteneur = tailleConteneur;
+    public void setTaille(String taille) {
+        this.taille = taille;
     }
 
-    public String getNumeroPlomb() {
-        return numeroPlomb;
+    public String getPlomb() {
+        return plomb;
     }
 
-    public void setNumeroPlomb(String numeroPlomb) {
-        this.numeroPlomb = numeroPlomb;
+    public void setPlomb(String plomb) {
+        this.plomb = plomb;
     }
 }
