@@ -13,4 +13,5 @@ public interface IManifeste {
     Page<ManifesteDTO> getManifesteBySpecification(String annee, String bureau, String navire, Date dateArrivee, String connaissement);
     List<ManifesteArticleDTO>getAllManifeste();
     void getAllManfiesteAndSave();
+    ManifesteDTO saveTest(ManifesteArticleDTO manifestePostDTO);
 }

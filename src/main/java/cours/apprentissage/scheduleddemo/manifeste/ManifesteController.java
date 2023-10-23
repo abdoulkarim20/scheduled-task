@@ -24,4 +24,11 @@ public class ManifesteController {
     public List<ManifesteArticleDTO>getAll(){
         return iManifeste.getAllManifeste();
     }
+
+    @PostMapping("/save-all-manifeste-from-douane")
+    public void saveALlManifeste(@RequestBody List<ManifesteArticleDTO> list){
+        for (ManifesteArticleDTO manifesteArticleDTO : list) {
+            iManifeste.saveTest(manifesteArticleDTO);
+        }
+    }
 }

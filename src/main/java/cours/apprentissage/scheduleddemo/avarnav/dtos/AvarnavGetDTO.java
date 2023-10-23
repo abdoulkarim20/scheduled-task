@@ -1,14 +1,9 @@
-package cours.apprentissage.scheduleddemo.avarnav;
+package cours.apprentissage.scheduleddemo.avarnav.dtos;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "avarnavs")
-public class Avarnav {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AvarnavGetDTO {
     private Long id;
     private String escale;
     private LocalDate dateMouvement;
@@ -41,6 +36,14 @@ public class Avarnav {
 
     public void setDateMouvement(LocalDate dateMouvement) {
         this.dateMouvement = dateMouvement;
+    }
+
+    public String getDateArrivee() {
+        return dateArrivee;
+    }
+
+    public void setDateArrivee(String dateArrivee) {
+        this.dateArrivee = dateArrivee;
     }
 
     public String getNavire() {
@@ -81,13 +84,5 @@ public class Avarnav {
 
     public void setPosteQuaiDemande(String posteQuaiDemande) {
         this.posteQuaiDemande = posteQuaiDemande;
-    }
-
-    public String getDateArrivee() {
-        return dateArrivee;
-    }
-
-    public void setDateArrivee(String dateArrivee) {
-        this.dateArrivee = dateArrivee;
     }
 }

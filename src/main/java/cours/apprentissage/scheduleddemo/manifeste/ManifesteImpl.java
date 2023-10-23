@@ -114,6 +114,7 @@ public class ManifesteImpl implements IManifeste {
         }
     }
 
+    @Override
     public ManifesteDTO saveTest(ManifesteArticleDTO manifestePostDTO) {
         ManifesteArticleDTO manifesteArticleDTO = new ManifesteArticleDTO();
         manifesteArticleDTO.setAnnee_manif(manifestePostDTO.getAnnee_manif());
@@ -148,6 +149,4 @@ public class ManifesteImpl implements IManifeste {
         }
         return manifesteMapper.toDto(manifesteSaved);
     }
-
-
 }
